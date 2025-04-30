@@ -1,0 +1,132 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    height: 100vh;
+  }
+  
+  .product-card {
+    display: flex;
+    /* direction: rtl; */
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 800px;
+    height: 500px;
+    text-align: center;
+  }
+  
+  .product-image {
+    /* object-fit: cover; */
+    width: 350px;
+    border-radius: 20px;
+    height: auto;
+  }
+
+  .product-images {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.thumb {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.thumb:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.product-info {
+  padding: 20px;
+  flex: 1;
+  text-align: left;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.product-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.product-caption {
+  color: #9f9f9f;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.product-description {
+  color: #000000;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.product-price{
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.price {
+  font-size: 30px;
+  padding-bottom: 30px;
+  font-weight: bold;
+  color: #222;
+}
+
+.add-to-card{
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  display: block;
+  margin: 10px auto;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-card.active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(252, 129, 35);
+}
+
+.add-to-card.active i {
+  color: white;
+}
+
+.add-to-favorite {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: 1px solid black ;
+  display: block;
+  margin: 10px auto;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #959595;
+}

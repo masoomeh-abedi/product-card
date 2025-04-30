@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product-card</title>
+    <link rel="stylesheet" href="product-card-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   
+</head>
+<body>
+    <div class="product-card">
+        <img src="shoes-img/pair.png" id="main-image" alt="pair of shoes" class="product-image">
+        <div class="product-images">
+            <img src="shoes-img/pair.png" alt="pair of shoes" class="thumb">
+            <img src="shoes-img/top_side.png" alt="pair of shoes" class="thumb">
+            <img src="shoes-img/end_side.png" alt="pair of shoes" class="thumb">
+            <img src="shoes-img/behind.png" alt="pair of shoes" class="thumb">
+            <img src="shoes-img/under.png" alt="pair of shoes" class="thumb">
+        </div>
+        <div class="product-info">
+            <h2>Nike Air Max INTRLK Lite </h2>
+            <p class="product-caption"> Shoes for young children</p>    
+            <p class="product-description"> Let your child discover a new level 
+                of comfort with the Nike Air Max 
+                INTRLK Lite. Lightweight, durable,
+                and super easy to put on—these shoes
+                are designed to keep up with every 
+                adventure.
+            </p>
+            <div class="product-price">
+                <p><span class="price">$59.99</span></p>
+                <button class="add-to-card">Add to card <i class="fas fa-cart-plus"></i></button>
+                <button class="add-to-favorite">Add to favorite <i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>  
+
+
+    <script>
+        const mainImage = document.getElementById('main-image');
+        const thumbnails = document.querySelectorAll('.thumb');
+      
+        thumbnails.forEach(thumb => {
+          thumb.addEventListener('click', () => {
+            mainImage.src = thumb.src;
+          });
+        });
+        const favoriteBtn = document.querySelector('.add-to-favorite');
+        const favoriteIcon = favoriteBtn.querySelector('i');
+
+        favoriteBtn.addEventListener('click', () => {
+            // favoriteBtn.classList.toggle('active');
+
+            if (favoriteIcon.classList.contains('far')) {
+            favoriteIcon.classList.remove('far');
+            favoriteIcon.classList.add('fas');
+            } else {
+            favoriteIcon.classList.remove('fas');
+            favoriteIcon.classList.add('far');
+            }
+        });
+        const cardBtn = document.querySelector('.add-to-card');
+        const cardIcon = cardBtn.querySelector('i');
+
+        cardBtn.addEventListener('click', () => {
+            cardBtn.classList.toggle('active');
+
+            // if (cardIcon.classList.contains('far')) {
+            //     cardIcon.classList.remove('far');
+            //     cardIcon.classList.add('far');
+            // } else {
+            //     cardIcon.classList.remove('far');
+            //     cardIcon.classList.add('far');
+            // }
+        });
+
+
+
+      </script>
+</body>
+</html>
